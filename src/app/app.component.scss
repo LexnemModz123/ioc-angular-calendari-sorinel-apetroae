@@ -1,0 +1,53 @@
+
+.contenidor {
+  display: flex;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: "OCR A Std", monospace;
+}
+
+.contingut {
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.targeta {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #6D3B07;
+  border-radius: 10px;
+}
+
+.targeta h2 {
+  margin-top: 0;
+}
+
+.targeta li {
+  margin-bottom: 0.5rem;
+}
+
+.estat {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+aside {
+  width: 250px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #6D3B07;
+  color:white;
+}
+
+aside h2 {
+  margin-top: 0;
+}
