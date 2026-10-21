@@ -1,38 +1,29 @@
 <section class="llista">
   <h2>Esdeveniments del calendari</h2>
   
-  <div class="filtres">
-  <label for="filtreText">Cerca per títol:</label>
-  <input
-    id="filtreText"
-    type="text"
-    [(ngModel)]="filtreText"
-    placeholder="Escriu un títol..."
-  />
+  <app-barra-filtres
+    [filtreText]="filtreText"
+    [filtreCategoria]="filtreCategoria"
+    (filtresAplicats)="aplicarFiltres($event)"
+    (filtresRestablerts)="restablirFiltres()">
+  </app-barra-filtres>
 
-  <label for="filtreCategoria">Filtra per categoria:</label>
-  <select id="filtreCategoria" [(ngModel)]="filtreCategoria">
-    <option value="">Totes les categories</option>
-    <option value="Cultura">Cultura</option>
-    <option value="Esports">Esports</option>
-    <option value="Gastronomia">Gastronomia</option>
-    <option value="Tecnologia">Tecnologia</option>
-    <option value="Comerç">Comerç</option>
-  </select>
-  </div>
-
-  @for (esdeveniment of esdevenimentsFiltrats; track esdeveniment.id) {
-    <app-targeta-esdeveniment
-      [esdeveniment]="esdeveniment"
-      (seleccionat)="seleccionarEsdeveniment($event)">
-    </app-targeta-esdeveniment>
-  }
-
-  @if (esdevenimentsFiltrats.length === 0) {
-  <p class="sense-resultats">
-    No s'han trobat esdeveniments amb aquests filtres.
+  <p class="comptador" role="status" aria-live="polite">
+  Resultats trobats: {{ esdevenimentsFiltrats.length }}
   </p>
-  }
+
+  @if (esdevenimentsFiltrats.length > 0) {
+    @for (esdeveniment of esdevenimentsFiltrats; track esdeveniment.id) {
+      <app-targeta-esdeveniment
+        [esdeveniment]="esdeveniment"
+        (seleccionat)="seleccionarEsdeveniment($event)">
+      </app-targeta-esdeveniment>
+    }
+  } @else {
+    <p class="sense-resultats" role="status">
+      No s'han trobat esdeveniments amb aquests filtres.
+    </p>
+    }
 
   @if (esdevenimentSeleccionat) {
     <section class="detall">

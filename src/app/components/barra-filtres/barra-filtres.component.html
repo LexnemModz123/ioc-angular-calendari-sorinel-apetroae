@@ -1,0 +1,49 @@
+<form #formulari="ngForm" (ngSubmit)="aplicar()">
+  <div class="filtres">
+    <label for="filtreText">Cerca per títol:</label>
+
+    <input
+      id="filtreText"
+      name="filtreText"
+      type="text"
+      [(ngModel)]="filtreText"
+      required
+      minlength="3"
+      #text="ngModel"
+      placeholder="Escriu almenys 3 caràcters..."
+    />
+
+    @if (text.invalid && (text.dirty || text.touched)) {
+      <p class="error">
+        @if (text.errors?.['required']) {
+          El text de cerca és obligatori.
+        } @else if (text.errors?.['minlength']) {
+          Has d'escriure com a mínim 3 caràcters.
+        }
+      </p>
+    }
+
+    <label for="filtreCategoria">Filtra per categoria:</label>
+
+    <select
+      id="filtreCategoria"
+      name="filtreCategoria"
+      [(ngModel)]="filtreCategoria"
+    >
+      <option value="">Totes les categories</option>
+      <option value="Cultura">Cultura</option>
+      <option value="Esports">Esports</option>
+      <option value="Gastronomia">Gastronomia</option>
+      <option value="Tecnologia">Tecnologia</option>
+      <option value="Comerç">Comerç</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="formulari.invalid">
+    Aplicar filtres
+  </button>
+
+  <button type="button" (click)="restablir()">
+    Restablir filtres
+  </button>
+</form>

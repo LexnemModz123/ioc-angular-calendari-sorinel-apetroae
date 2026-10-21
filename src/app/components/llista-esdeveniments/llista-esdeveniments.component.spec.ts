@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LlistaEsdeveniments } from './llista-esdeveniments.component';
+import { LlistaEsdevenimentsComponent } from './llista-esdeveniments.component';
 
 describe('LlistaEsdeveniments', () => {
-  let component: LlistaEsdeveniments;
-  let fixture: ComponentFixture<LlistaEsdeveniments>;
+  let component: LlistaEsdevenimentsComponent;
+  let fixture: ComponentFixture<LlistaEsdevenimentsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LlistaEsdeveniments],
+      imports: [LlistaEsdevenimentsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LlistaEsdeveniments);
+    fixture = TestBed.createComponent(LlistaEsdevenimentsComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -12,7 +12,7 @@
 
   <p><strong>Durada:</strong> {{ esdeveniment.durada }} minuts</p>
 
-  @if (esdeveniment.destacat) {
-    <p class="destacat">Esdeveniment destacat</p>
-  }
+  <app-etiqueta-esdeveniment
+  [destacat]="esdeveniment.destacat ?? false">
+  </app-etiqueta-esdeveniment>
 </article>
