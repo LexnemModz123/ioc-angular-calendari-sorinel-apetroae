@@ -1,0 +1,18 @@
+<article class="targeta" (click)="seleccionar()">
+  <h3>{{ esdeveniment.titol }}</h3>
+
+  <p>{{ esdeveniment.descripcio }}</p>
+
+  <p><strong>Categoria:</strong> {{ esdeveniment.categoria }}</p>
+
+  <p>
+    <strong>Data:</strong> 
+      {{ esdeveniment.data | date : 'd MMMM yyyy' }}
+  </p>
+
+  <p><strong>Durada:</strong> {{ esdeveniment.durada }} minuts</p>
+
+  @if (esdeveniment.destacat) {
+    <p class="destacat">Esdeveniment destacat</p>
+  }
+</article>

@@ -1,28 +1,9 @@
+
 <main class="contenidor">
-  <section class="contingut">
+  <header>
     <h1>{{ nomApp }}</h1>
+    <p>Consulta els esdeveniments i les activitats del calendari.</p>
+  </header>
 
-    <p>
-      Desenvolupat per Sorinel Apetroae. Aquesta aplicació es tracta d'un Calendari per a posar esdeveniments importants de l'usuari.
-    </p>
-
-    <section class="targeta">
-      <h2>Dades del projecte</h2>
-      <ul>
-        <li><strong>Aplicació:</strong> {{ nomApp }}</li>
-        <li><strong>Framework:</strong> Angular</li>
-        <li><strong>Estils:</strong> SCSS</li>
-        <li><strong>Gestor de paquets:</strong> npm</li>
-      </ul>
-    </section>
-
-    <p class="estat">Projecte base llest</p>
-  </section>
-
-  <aside>
-    <h2>Nota</h2>
-    <p>
-      Aquest projecte és la base per desenvolupar l'aplicació.
-    </p>
-  </aside>
+  <app-llista-esdeveniments></app-llista-esdeveniments>
 </main>
