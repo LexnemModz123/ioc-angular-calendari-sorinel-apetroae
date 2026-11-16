@@ -4,6 +4,7 @@ export interface Esdeveniment {
   descripcio: string;
   categoria: string;
   data: string;
+  ubicacio: string;
   durada: number;
   destacat?: boolean;
 }

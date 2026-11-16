@@ -1,0 +1,113 @@
+{
+  "esdeveniments": [
+    {
+      "id": "1",
+      "titol": "Concert de música clàssica",
+      "descripcio": "Concert amb música de compositors clàssics.",
+      "categoria": "Música",
+      "data": "2026-12-10",
+      "durada": 120,
+      "destacat": true
+    },
+    {
+      "id": "2",
+      "titol": "Exposició de fotografia",
+      "descripcio": "Exposició de fotografia contemporània.",
+      "categoria": "Cultura",
+      "data": "2026-12-12",
+      "durada": 90,
+      "destacat": false
+    },
+    {
+      "id": "3",
+      "titol": "Taller de programació",
+      "descripcio": "Introducció al desenvolupament web.",
+      "categoria": "Tecnologia",
+      "data": "2026-12-15",
+      "durada": 180,
+      "destacat": true
+    },
+    {
+      "id": "4",
+      "titol": "Cursa popular",
+      "descripcio": "Cursa popular oberta a tots els participants.",
+      "categoria": "Esport",
+      "data": "2026-12-18",
+      "durada": 60,
+      "destacat": false
+    },
+    {
+      "id": "5",
+      "titol": "Festival de jazz",
+      "descripcio": "Actuacions de diferents grups de jazz.",
+      "categoria": "Música",
+      "data": "2026-12-20",
+      "durada": 150,
+      "destacat": true
+    },
+    {
+      "id": "6",
+      "titol": "Club de lectura",
+      "descripcio": "Trobada per comentar una novel·la.",
+      "categoria": "Cultura",
+      "data": "2026-12-22",
+      "durada": 75,
+      "destacat": false
+    },
+    {
+      "id": "7",
+      "titol": "Xerrada sobre intel·ligència artificial",
+      "descripcio": "Xerrada sobre les aplicacions de la IA.",
+      "categoria": "Tecnologia",
+      "data": "2026-12-27",
+      "durada": 90,
+      "destacat": true
+    },
+    {
+      "id": "8",
+      "titol": "Torneig de pàdel",
+      "descripcio": "Competició amateur de pàdel.",
+      "categoria": "Esport",
+      "data": "2026-12-29",
+      "durada": 120,
+      "destacat": false
+    },
+    {
+      "id": "9",
+      "titol": "Teatre amateur",
+      "descripcio": "Representació d'una obra de teatre.",
+      "categoria": "Cultura",
+      "data": "2027-01-05",
+      "durada": 100,
+      "destacat": true
+    },
+    {
+      "id": "10",
+      "titol": "Taller de fotografia",
+      "descripcio": "Aprèn tècniques bàsiques de fotografia.",
+      "categoria": "Cultura",
+      "data": "2027-01-08",
+      "durada": 120,
+      "destacat": false
+    },
+    {
+      "titol": "Esdeveniment de prova POST",
+      "descripcio": "Aquest esdeveniment s’ha creat mitjançant una petició POST.",
+      "categoria": "Cultura",
+      "data": "2027-01-15",
+      "durada": 60,
+      "destacat": true,
+      "id": "8-vyVM8TaIE"
+    },
+    {
+      "titol": "Esdeveniment de prova POST",
+      "descripcio": "Aquest esdeveniment s’ha creat mitjançant una petició POST.",
+      "categoria": "Cultura",
+      "data": "2027-01-15",
+      "durada": 60,
+      "destacat": true,
+      "id": "8H8h1Y8_sTY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

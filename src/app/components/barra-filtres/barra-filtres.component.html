@@ -1,25 +1,53 @@
-<form #formulari="ngForm" (ngSubmit)="aplicar()">
+<form [formGroup]="formulari" (ngSubmit)="aplicar()">
+
   <div class="filtres">
+
     <label for="filtreText">Cerca per títol:</label>
 
     <input
       id="filtreText"
-      name="filtreText"
       type="text"
-      [(ngModel)]="filtreText"
-      required
-      minlength="3"
-      #text="ngModel"
+      formControlName="filtreText"
       placeholder="Escriu almenys 3 caràcters..."
     />
 
-    @if (text.invalid && (text.dirty || text.touched)) {
-      <p class="error">
-        @if (text.errors?.['required']) {
+    @if (
+      formulari.get('filtreText')?.invalid &&
+      (formulari.get('filtreText')?.dirty ||
+       formulari.get('filtreText')?.touched)
+    ) {
+
+      @if (formulari.get('filtreText')?.errors?.['required']) {
+        <p class="error">
           El text de cerca és obligatori.
-        } @else if (text.errors?.['minlength']) {
+        </p>
+      } @else if (formulari.get('filtreText')?.errors?.['minlength']) {
+        <p class="error">
           Has d'escriure com a mínim 3 caràcters.
-        }
+        </p>
+      }
+
+    }
+
+    @if (
+      formulari.get('filtreText')?.hasError('senseResultats') &&
+      (formulari.get('filtreText')?.dirty ||
+       formulari.get('filtreText')?.touched)
+    ) {
+      <p class="error">
+        No s'han trobat esdeveniments amb aquest títol.
+      </p>
+    }
+
+    @if (formulari.get('filtreText')?.hasError('errorConsulta')) {
+      <p class="error">
+        No s'ha pogut validar la cerca. Torna-ho a intentar.
+      </p>
+    }
+
+    @if (formulari.get('filtreText')?.pending) {
+      <p role="status">
+        Comprovant resultats...
       </p>
     }
 
@@ -27,8 +55,7 @@
 
     <select
       id="filtreCategoria"
-      name="filtreCategoria"
-      [(ngModel)]="filtreCategoria"
+      formControlName="filtreCategoria"
     >
       <option value="">Totes les categories</option>
       <option value="Cultura">Cultura</option>
@@ -37,13 +64,46 @@
       <option value="Tecnologia">Tecnologia</option>
       <option value="Comerç">Comerç</option>
     </select>
+
   </div>
 
-  <button type="submit" [disabled]="formulari.invalid">
+  <button
+    type="submit"
+    [disabled]="formulari.invalid || formulari.pending"
+  >
     Aplicar filtres
   </button>
 
-  <button type="button" (click)="restablir()">
+  <button
+    type="button"
+    (click)="restablir()"
+  >
     Restablir filtres
   </button>
+
 </form>
+
+@if (historialCerques.length > 0) {
+  <div class="historial">
+
+    <h3>Historial de cerques</h3>
+
+    <ul>
+      @for (cerca of historialCerques; track cerca) {
+        <li>
+          <button
+            type="button"
+            (click)="recuperarCerca(cerca)"
+          >
+            {{ cerca }}
+          </button>
+        </li>
+      }
+    </ul>
+
+  </div>
+} @else {
+  <p role="status">
+    Encara no hi ha cerques a l'historial.
+  </p>
+}

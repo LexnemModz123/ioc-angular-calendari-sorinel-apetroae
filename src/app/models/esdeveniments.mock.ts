@@ -9,6 +9,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Cultura',
     data: '2026-11-05',
     durada: 120,
+    ubicacio: 'No especificada',
     destacat: true
   },
   {
@@ -18,6 +19,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Esports',
     data: '2026-11-07',
     durada: 90,
+    ubicacio: 'No especificada',
     destacat: true
   },
   {
@@ -27,6 +29,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Cultura',
     data: '2026-11-09',
     durada: 60,
+    ubicacio: 'No especificada',
     destacat: false
   },
   {
@@ -36,6 +39,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Gastronomia',
     data: '2026-11-11',
     durada: 120,
+    ubicacio: 'No especificada',
     destacat: false
   },
   {
@@ -45,6 +49,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Tecnologia',
     data: '2026-11-14',
     durada: 180,
+    ubicacio: 'No especificada',
     destacat: true
   },
   {
@@ -54,6 +59,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Esports',
     data: '2026-11-16',
     durada: 90,
+    ubicacio: 'No especificada',
     destacat: false
   },
   {
@@ -63,6 +69,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Cultura',
     data: '2026-11-18',
     durada: 75,
+    ubicacio: 'No especificada',
     destacat: false
   },
   {
@@ -72,6 +79,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Tecnologia',
     data: '2026-11-20',
     durada: 60,
+    ubicacio: 'No especificada',
     destacat: true
   },
   {
@@ -81,6 +89,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Comerç',
     data: '2026-11-22',
     durada: 240,
+    ubicacio: 'No especificada',
     destacat: false
   },
   {
@@ -90,6 +99,7 @@ export const ESDEVENIMENTS_MOCK: Esdeveniment[] = [
     categoria: 'Esports',
     data: '2026-11-25',
     durada: 150,
+    ubicacio: 'No especificada',
     destacat: true
   }
 ];

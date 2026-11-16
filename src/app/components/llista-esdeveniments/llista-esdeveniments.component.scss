@@ -1,3 +1,4 @@
+
 .llista {
   display: flex;
   flex-direction: column;
@@ -30,32 +31,45 @@
   color: #222;
 }
 
-.filtres {
+.error-banner {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-left: 5px solid #dc2626;
+  border-radius: 8px;
+  color: #991b1b;
 
-.filtres input,
-.filtres select {
-  max-width: 100%;
-  box-sizing: border-box;
+  p {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #b91c1c;
+    }
+  }
 }
 
 @media (max-width: 600px) {
-  .filtres {
-    flex-direction: column;
-    align-items: stretch;
+  .detall {
+    padding: 0.75rem;
   }
 
-  .filtres input,
-  .filtres select,
-  form button {
-    width: 100%;
-  }
-
-  form button {
-    margin-top: 8px;
+  .error-banner button {
+    align-self: stretch;
   }
 }

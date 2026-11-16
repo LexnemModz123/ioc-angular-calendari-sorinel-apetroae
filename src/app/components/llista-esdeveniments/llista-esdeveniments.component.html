@@ -8,9 +8,32 @@
     (filtresRestablerts)="restablirFiltres()">
   </app-barra-filtres>
 
+  @if (carregant) {
+  <p role="status">Carregant esdeveniments...</p>
+  }
+
+  @if (error) {
+    <div class="error-banner" role="alert" aria-live="assertive">
+      <p>{{ error }}</p>
+      <button type="button" (click)="carregarEsdeveniments()">Reintentar</button>
+  </div>
+}
+
   <p class="comptador" role="status" aria-live="polite">
-  Resultats trobats: {{ esdevenimentsFiltrats.length }}
+    Resultats trobats: {{ esdevenimentsFiltrats.length }}
   </p>
+
+  <button (click)="crearEsdevenimentProva()">
+    Provar creació d'esdeveniment (POST)
+  </button>
+
+  @if (creant) {
+    <p role="status">Creant esdeveniment...</p>
+  }
+
+  @if (errorCreacio) {
+    <p role="alert">{{ errorCreacio }}</p>
+  }
 
   @if (esdevenimentsFiltrats.length > 0) {
     @for (esdeveniment of esdevenimentsFiltrats; track esdeveniment.id) {

@@ -12,6 +12,7 @@ describe('TargetaEsdevenimentComponent', () => {
     descripcio: 'Descripció de prova',
     categoria: 'Cultura',
     data: '2026-11-15',
+    ubicacio: 'No especificada',
     durada: 60,
     destacat: false
   };
